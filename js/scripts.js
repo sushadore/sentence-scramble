@@ -5,10 +5,9 @@ $(function () {
     var originalSentence = $("#sentence").val();
     var space = " ";
     var words = originalSentence.split(space);
-    var longWords = [];
-    words.forEach(function(word) {
+    var longWords = words.map(function(word) {
       if (word.length >= 3) {
-        longWords.push(word);
+        return word;
       }
     });
     var result = longWords.reverse();
